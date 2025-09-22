@@ -984,7 +984,6 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: paused !important;
 }
-
 /* === OVERRIDES AMARILLOS (pégalo al final de tu CSS) === */
 
 /* Fondo más cálido */
@@ -1065,3 +1064,50 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 /* Un toque más cálido al resplandor del “disco” superior si querés
 .flower__white-circle { background-color: #fff7e0 !important; }
 */
+/* ——— Texto dedicado ——— */
+.dedication {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16vmin;               /* encima del jardín */
+  z-index: 999;
+  padding: 0.4em 0.9em;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans";
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: clamp(18px, 4.2vw, 46px);
+  color: #fff5bf;               /* amarillo cálido */
+  text-shadow:
+    0 1px 0 #000,
+    0 0 12px rgba(255, 213, 77, .65),
+    0 0 30px rgba(255, 193, 7, .35);
+  background: rgba(0,0,0,.25);  /* leve placa para contraste */
+  border: 1px solid rgba(255, 235, 59, .25);
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  animation: dedication-float 4s ease-in-out infinite, dedication-shimmer 2.8s linear infinite;
+  pointer-events: none;          /* no bloquea clics */
+}
+
+/* flotadito suave */
+@keyframes dedication-float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-6px); }
+}
+
+/* brillo que respira */
+@keyframes dedication-shimmer {
+  0%, 100% { text-shadow:
+    0 1px 0 #000,
+    0 0 10px rgba(255, 213, 77, .55),
+    0 0 22px rgba(255, 193, 7, .25); }
+  50% { text-shadow:
+    0 1px 0 #000,
+    0 0 16px rgba(255, 231, 135, .9),
+    0 0 36px rgba(255, 208, 90, .45); }
+}
+
+/* por si en móviles queda muy cerca del borde */
+@media (max-width: 480px) {
+  .dedication { bottom: 20vmin; }
+}
