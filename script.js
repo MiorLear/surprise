@@ -71,7 +71,8 @@ function initValentineCard() {
     "Te tengo que decir algo muy importante... ✨",
     "Pero muy muy muy muy importante, de importancia mundial. 💜",
     "Como sabras, no he conocido persona que se bañe tan poco como tu. 🌻",
-    "Pero eso no tiene nada que ver, la pregunta que quiero hacerte es..."
+    "Pero eso no tiene nada que ver, la pregunta que quiero hacerte es...",
+    "MIAU MIAU MIAU MIAU MIAU 🙀"
   ];
 
   let currentPage = 0;
@@ -163,7 +164,7 @@ function moveButton(btn) {
 }
 
 function spawnAnimal() {
-  const animals = ["assets/cat.png", "assets/dog.png", "assets/bear.png", "assets/bunny.png"];
+  const animals = ["assets/cat.png", "assets/dog.png", "assets/melody.png", "assets/baby.png",  "assets/cats.png", "assets/shy.png", "assets/eyes1.png","assets/eyes2.png", "assets/eyes3.png","assets/eyes.png", "assets/bear.png", "assets/bunny.png"];
   const randomAnimal = animals[Math.floor(Math.random() * animals.length)];
   const img = document.createElement("img");
   img.src = randomAnimal;
