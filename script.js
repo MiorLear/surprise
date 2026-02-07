@@ -70,7 +70,7 @@ function initValentineCard() {
     "Dani... 🌸",
     "Te tengo que decir algo muy importante... ✨",
     "Pero muy muy muy muy importante, de importancia mundial. 💜",
-    "Como sabras, no he conocido persona que se bañe tan seguido como tu. 🌻",
+    "Como sabras, no he conocido persona que se bañe tan poco como tu. 🌻",
     "Pero eso no tiene nada que ver, la pregunta que quiero hacerte es..."
   ];
 
